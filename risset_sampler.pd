@@ -490,7 +490,6 @@
 #X msg 305 152 0.15;
 #X obj 22 9 loadbang;
 #X msg 22 33 4, f 1;
-#X text 51 56 Metabar duration factor \; e.g. τ = 4 * T;
 #N canvas 744 88 591 621 stream_1 0;
 #X obj 121 578 outlet~, f 8;
 #X obj 12 33 r \$0-slength;
@@ -566,6 +565,7 @@
 #X connect 36 0 0 0;
 #X connect 38 0 6 1;
 #X restore 272 272 pd stream_1;
+#X text 51 56 Metabar duration factor \, e.g. τ = T * 4, f 46;
 #X connect 0 0 5 0;
 #X connect 1 0 6 0;
 #X connect 2 0 1 0;
@@ -626,7 +626,7 @@
 #X connect 69 1 65 0;
 #X connect 70 0 62 0;
 #X connect 70 0 59 0;
-#X connect 71 0 148 0;
+#X connect 71 0 147 0;
 #X connect 72 0 70 0;
 #X connect 73 0 72 1;
 #X connect 73 0 74 0;
@@ -703,7 +703,7 @@
 #X connect 144 0 7 0;
 #X connect 145 0 146 0;
 #X connect 146 0 2 0;
-#X connect 148 0 69 0;
+#X connect 147 0 69 0;
 #X restore 111 149 pd sampleplayer;
 #X obj 20 149 tgl 38 0 \$0-playsample \$0-playsampledummy Normal 1 45 0 8 #606060 #ffffff #000000 0 1;
 #X obj 62 149 tgl 38 0 \$0-playrisset \$0-playrissetdummy Risset 1 45 0 8 #404040 #ffffff #000000 0 1;
