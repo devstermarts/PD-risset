@@ -14,7 +14,7 @@ The individual play back rates and depending amplitude envelopes for each stream
 ![pd stream](./assets/stream.png)
 
 ## Examples
-Three examples for Risset eternal accelerando rhythms from the implementation can be seen on [YouTube](https://www.youtube.com/watch?v=EQGDyMw1bW)
+Three examples for Risset eternal accelerando rhythms from the implementation can be seen on [YouTube](https://www.youtube.com/watch?v=EQGDyMw1bW8)
 
 ## Observations, open issues and questions:
 1. There is an uncertainty concerning the unit of parameter "b" (bandwidth of octaves). The observation is, that for the test audio samples, values < 1 work best to achieve the required auditory effect, there also seems to be a sweet spot around the value of 0.15 for the sample provided in this repository.
