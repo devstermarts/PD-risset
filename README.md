@@ -1,9 +1,9 @@
 # Risset Sampler for PD
 
 ## Risset eternal accelerando
-[Jean-Claude Risset](https://en.wikipedia.org/wiki/Jean-Claude_Risset#cite_note-5) described the auditory illusion of an "eternal accelerando", where, similar to Shepard tones for pitch, a rhythm can be structured and played back in a way that creates the [perception of constant acceleration](https://pubs.aip.org/asa/jasa/article-abstract/80/3/961/680513/Pitch-and-rhythm-paradoxes-Comments-on-Auditory?redirectedFrom=fulltext).
+[Jean-Claude Risset](https://en.wikipedia.org/wiki/Jean-Claude_Risset) described the auditory illusion of an "eternal accelerando", where, similar to Shepard tones for pitch, a rhythm can be structured and played back in a way that creates the [perception of constant acceleration](https://pubs.aip.org/asa/jasa/article-abstract/80/3/961/680513/Pitch-and-rhythm-paradoxes-Comments-on-Auditory?redirectedFrom=fulltext).
 
-In his 2011 paper ["Scheduling and composing with Risset eternal accelerando rhythms"](./assets/Stowell2011icmc.pdf), Dan Stowell provided a solution for implementing eternal accelerandos on (rhythmic) audio samples.
+In his 2011 paper ["Scheduling and composing with Risset eternal accelerando rhythms"](./assets/Stowell2011icmc.pdf), Dan Stowell provided a solution for implementing eternal accelerandos on (rhythmic) audio samples by employing variable play back rates and amplitudes distributed to a number of sample play back streams that run synchronized.
 
 ## Implementation for Pure Data
 **Risset Sampler** is a Pure Data implementation of an eternal accelerando following Stowell's paper.
