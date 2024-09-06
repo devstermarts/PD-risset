@@ -10,7 +10,7 @@ In his 2011 paper ["Scheduling and composing with Risset eternal accelerando rhy
 ![risset_sampler.pd](./assets/risset_sampler.png)
 In the patch, there are 5 streams set up to play back the same drum loop sample in different rates and amplitude to generate the eternal accelerando effect.
 ![pd sampleplayer](./assets/sampleplayer.png)
-The individual play back rates and depending amplitude envelopes for each stream are calculated with Stowell's formulas (2) and (3) in the *pd streamX* subpatches.
+The individual play back rates and depending amplitude envelopes for each stream are calculated with Stowell's formulas (2) and (3) in the *pd stream_X* subpatches.
 ![pd stream](./assets/stream.png)
 
 ## Examples
