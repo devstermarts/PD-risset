@@ -1,4 +1,4 @@
-#N canvas 667 107 587 400 12;
+#N canvas 513 234 587 400 12;
 #N canvas 830 139 450 278 (subpatch) 0;
 #X array \$0-rs_array 129069 float 2;
 #X coords 0 1 129069 -1 200 80 2 0 0;
@@ -48,10 +48,10 @@
 #X obj 1150 34 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 1185 58 sel 1;
 #X obj 1150 198 throw~ \$0-rs_bus;
-#X obj 605 59 r \$0-tmeta;
-#X obj 700 59 r \$0-srate;
-#X floatatom 605 107 9 0 0 0 - - - 0;
-#X obj 605 83 expr 1/$f1*$f2;
+#X obj 602 35 r \$0-tmeta;
+#X obj 697 35 r \$0-srate;
+#X floatatom 602 83 9 0 0 0 - - - 0;
+#X obj 602 59 expr 1/$f1*$f2;
 #X obj 580 176 phasor~;
 #X text 640 175 te/τ;
 #X obj 580 130 *, f 4;
@@ -517,13 +517,15 @@
 #X connect 37 0 6 1;
 #X restore 272 272 pd stream_1;
 #X text 51 56 Metabar duration factor \, e.g. τ = T * 4, f 46;
-#X obj 580 35 inlet playback;
+#X obj 580 9 inlet playback;
 #X obj 40 319 r \$0-rares;
 #X obj 290 319 r \$0-rares;
 #X obj 540 319 r \$0-rares;
 #X obj 790 319 r \$0-rares;
 #X obj 1040 319 r \$0-rares;
 #X obj 615 130 s \$0-rares;
+#X obj 580 106 f, f 2;
+#X obj 602 106 t b f;
 #X connect 0 0 5 0;
 #X connect 1 0 6 0;
 #X connect 2 0 1 0;
@@ -554,7 +556,7 @@
 #X connect 41 1 38 1;
 #X connect 43 0 46 0;
 #X connect 44 0 46 1;
-#X connect 45 0 49 1;
+#X connect 45 0 150 0;
 #X connect 46 0 45 0;
 #X connect 47 0 51 0;
 #X connect 49 0 47 0;
@@ -650,9 +652,9 @@
 #X connect 138 0 139 0;
 #X connect 139 0 2 0;
 #X connect 140 0 67 0;
-#X connect 142 0 49 0;
 #X connect 142 0 50 0;
 #X connect 142 0 148 0;
+#X connect 142 0 149 0;
 #X connect 143 0 55 1;
 #X connect 143 0 56 0;
 #X connect 144 0 70 1;
@@ -663,6 +665,9 @@
 #X connect 146 0 101 0;
 #X connect 147 0 115 1;
 #X connect 147 0 116 0;
+#X connect 149 0 49 0;
+#X connect 150 0 149 0;
+#X connect 150 1 49 1;
 #X restore 20 245 pd sampleplayer;
 #N canvas 92 169 454 284 master 0;
 #X obj 179 222 dac~, f 5;
