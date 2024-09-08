@@ -20,3 +20,6 @@ Three examples for Risset eternal accelerando rhythms from the implementation ca
 1. There is an uncertainty concerning the unit of parameter "b" (bandwidth of octaves). The observation is, that for the test audio samples, values < 1 work best to achieve the required auditory effect, there also seems to be a sweet spot around the value of 0.15 for the sample provided in this repository.
 2. The duration of the metabar τ is currently calculated by multiplying the sample duration T by a factor > 1. Doubling the amount of bars in a given (fixed 4/4 * 2 bars length) test audio sample seem to yield the most convincing results. There's more clarification needed whether τ = T * 4 can be generalized.
 3. Depending on "b", amplitude powers seem to become erratic in such way that values generated on (lower) streams are glued to 0.841 (due to the +/- π clipping and following calculations in p(r)). The general question regards the intended flexibility of the parameters (or whether they need to be determined/ fixed depending on the source sample).
+
+## Other
+A modular, 2 channel component version of this implementation can be found in the [PD-components](https://github.com/devstermarts/PD-components/blob/main/various/jaycee.pd) repository.
