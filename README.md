@@ -22,4 +22,4 @@ Three examples for Risset eternal accelerando rhythms from the implementation ca
 3. Depending on "b", amplitude powers seem to become erratic in such way that values generated on (lower) streams are glued to 0.841 (due to the +/- π clipping and following calculations in p(r)). The general question regards the intended flexibility of the parameters (or whether they need to be determined/ fixed depending on the source sample).
 
 ## Other
-The repo also contains a modular, 2 channel component version of this implementation ("jayceearr.pd") that can be used in compositions. 
+The repo also contains a modular, 2 channel component version of this implementation ("jaycee.pd") that can be used in compositions. 
