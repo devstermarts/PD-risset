@@ -1,28 +1,33 @@
-# Risset Sampler for PD
+# PD-risset
 
 ## Risset eternal accelerando
 [Jean-Claude Risset](https://en.wikipedia.org/wiki/Jean-Claude_Risset) described the auditory illusion of an "eternal accelerando", where, similar to Shepard tones for pitch, a rhythm can be structured and played back in a way that creates the [perception of constant acceleration](https://pubs.aip.org/asa/jasa/article-abstract/80/3/961/680513/Pitch-and-rhythm-paradoxes-Comments-on-Auditory?redirectedFrom=fulltext).
 
-In his 2011 paper ["Scheduling and composing with Risset eternal accelerando rhythms"](./assets/Stowell2011icmc.pdf), Dan Stowell provided a solution for implementing eternal accelerandos on (rhythmic) audio samples by employing variable play back rates and amplitudes distributed to a number of sample play back streams that run synchronized.
+In his 2011 paper ["Scheduling and composing with Risset eternal accelerando rhythms"](https://www.semanticscholar.org/paper/Scheduling-and-composing-with-Risset-eternal-Stowell/df6a5bf9566d609b120fe06cd7c2541f6aea453c), Dan Stowell provided a solution for implementing eternal accelerandos on (rhythmic) audio samples by employing variable play back rates and amplitudes distributed to a number of sample play back streams that run synchronized.
+Daniele Ghisi updated and enhanced this approach in ["Barberpole tempo illusions"](https://www.tandfonline.com/doi/abs/10.1080/17459737.2021.2001699) (2023). 
+
 
 ## Implementation for Pure Data
-**Risset Sampler** is a Pure Data implementation of an eternal accelerando following Stowell's paper.
-![risset_sampler.pd](./assets/risset_sampler.png)
-In the patch, there are 5 streams set up to play back the same drum loop sample in different rates and amplitude to generate the eternal accelerando effect.
+This repo contains a Pure Data implementation of eternal accelerando/ decelerando following Stowell's and Ghisi's papers. The main component is `jaycee.pd`, a modular, stereo sample playback abstraction. 
+![jaycee.pd](./assets/jaycee.png)
+The abstraction contains the `pd sampleplayer` sub patch with 5 streams set up to play back a sample in different rates and amplitude to generate the eternal accelerando (or decelerando) effect.
 ![pd sampleplayer](./assets/sampleplayer.png)
-The individual play back rates and depending amplitude envelopes for each stream are calculated with Stowell's formulas (2) and (3) in the *pd stream_X* subpatches.
-![pd stream](./assets/stream.png)
+The individual play back rates and depending amplitude envelopes for each stream are calculated with Stowell's formulas (2) and (3) in the `stream~.pd` abstractions. Ghisi suggested a correction to (3), which this implementation contains. 
+![stream~.pd](./assets/stream~.png)
+
+## Quick start
+1. Open ´main.pd´ in the root folder
+2. Toggle DAC
+3. Toggle play back
+![main.pd](./assets/main.png)
+
+*Written and tested in PD 0.56.2*
 
 ## Examples
-Three examples for Risset eternal accelerando rhythms from the implementation can be seen on [YouTube](https://www.youtube.com/watch?v=EQGDyMw1bW8)
+Three examples for Risset eternal accelerando rhythms from an earlier version of this implementation can be seen on [YouTube](https://www.youtube.com/watch?v=EQGDyMw1bW8). 
 
 ## Observations, open issues and questions:
-1. There is an uncertainty concerning the unit of parameter "b" (bandwidth of octaves). The observation is, that for the test audio samples, values < 1 work best to achieve the required auditory effect, there also seems to be a sweet spot around the value of 0.15 for the sample provided in this repository.
-2. The duration of the metabar τ is currently calculated by multiplying the sample duration T by a factor > 1. Doubling the amount of bars in a given (fixed 4/4 * 2 bars length) test audio sample seem to yield the most convincing results. There's more clarification needed whether τ = T * 4 can be generalized.
-3. Depending on "b", amplitude powers seem to become erratic in such way that values generated on (lower) streams are glued to 0.841 (due to the +/- π clipping and following calculations in p(r)). The general question regards the intended flexibility of the parameters (or whether they need to be determined/ fixed depending on the source sample).
-
-## Other
-The repo also contains a modular, 2 channel component version of this implementation ("jaycee.pd") that can be used in compositions.
+With 5 streams, the most convincing barberpole effect (lowest total amplitude variation, no audible jumps on metabar restart) seems to happen when `4 * τ = b`, where `τ` is the metabar duration factor and `b` the bandwidth used in amplitude calculation.
 
 ## Licence
-<a href="https://github.com/devstermarts/PD-risset">PD Risset</a> © 2025 by <a href="https://github.com/devstermarts">Martin Heinze</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+<a href="https://github.com/devstermarts/PD-risset">PD-risset</a> © 2024-2026 by <a href="https://github.com/devstermarts">Martin Heinze</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
