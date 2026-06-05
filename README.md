@@ -21,7 +21,7 @@ The individual play back rates and depending amplitude envelopes for each stream
 3. Toggle play back
 ![main.pd](./assets/main.png)
 
-*Written and tested in PD 0.56.2*
+*Written and tested in PD 0.56.3*
 
 ## Examples
 Three examples for Risset eternal accelerando rhythms from an earlier version of this implementation can be seen on [YouTube](https://www.youtube.com/watch?v=EQGDyMw1bW8). 
