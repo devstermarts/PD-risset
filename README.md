@@ -16,7 +16,7 @@ The individual play back rates and depending amplitude envelopes for each stream
 ![stream~.pd](./assets/stream~.png)
 
 ## Quick start
-1. Open ´main.pd´ in the root folder
+1. Open `main.pd` in the root folder
 2. Toggle DAC
 3. Toggle play back
 ![main.pd](./assets/main.png)
