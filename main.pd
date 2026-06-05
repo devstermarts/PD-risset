@@ -1,4 +1,4 @@
-#N canvas 222 219 936 373 12;
+#N canvas 92 215 935 373 12;
 #X obj 136 83 jaycee;
 #X obj 136 20 loadbang;
 #X msg 136 44 symbol ./assets/MystiqueBreak.wav;
