@@ -12,7 +12,7 @@ This repo contains a Pure Data implementation of eternal accelerando/ decelerand
 ![jaycee.pd](./assets/jaycee.png)
 The abstraction contains the `pd sampleplayer` sub patch with 5 streams set up to play back a sample in different rates and amplitude to generate the eternal accelerando (or decelerando) effect.
 ![pd sampleplayer](./assets/sampleplayer.png)
-The individual play back rates and depending amplitude envelopes for each stream are calculated with Stowell's formulas (2) and (3) in the *stream~.pd* abstractions. Ghisi suggested a correction to (3), which this implementation contains. 
+The individual play back rates and depending amplitude envelopes for each stream are calculated with Stowell's formulas (2) and (3) in the `stream~.pd` abstractions. Ghisi suggested a correction to (3), which this implementation contains. 
 ![stream~.pd](./assets/stream~.png)
 
 ## Quick start
