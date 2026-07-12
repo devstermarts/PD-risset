@@ -21,13 +21,15 @@ The individual play back rates and depending amplitude envelopes for each stream
 3. Toggle play back
 ![main.pd](./assets/main.png)
 
-*Written and tested in PD 0.56.3*
+*Written and tested in PD 0.56.5*
 
 ## Examples
 Three examples for Risset eternal accelerando rhythms from an earlier version of this implementation can be seen on [YouTube](https://www.youtube.com/watch?v=EQGDyMw1bW8). 
 
-## Observations, open issues and questions:
+## Observations and remarks:
 With 5 streams, the most convincing barberpole effect (lowest total amplitude variation, no audible jumps on metabar restart) seems to happen when `4 * τ = b`, where `τ` is the metabar duration factor and `b` the bandwidth used in amplitude calculation.
 
+Depending on the sound sample, the `weight` slider above the sample array can help smooth the effect by attenuating streams with peripheral play back rates (still experimental!). 
+
 ## Licence
-<a href="https://github.com/devstermarts/PD-risset">PD-risset</a> © 2024-2026 by <a href="https://github.com/devstermarts">Martin Heinze</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+<a href="https://codeberg.org/martstilde/PD-risset">PD-risset</a> © 2024-2026 by <a href="https://codeberg.org/martstilde">Martin Heinze</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
