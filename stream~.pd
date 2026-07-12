@@ -35,7 +35,7 @@
 #X obj 484 57 f \$3;
 #X text 171 411 p(r) = 1/2 * (cos [π*2/b * logD(r/rc)]/-π \, π/ + 1);
 #X text 517 79 D (rate inc. factor);
-#X text 223 129 D^(te/τ)+v;
+#X text 223 127 D^(te/τ)+v;
 #X obj 484 34 inlet D;
 #X text 110 153 r(v \, te) = T*logD/τ * D^(te/τ)+v;
 #X obj 484 126 s~ \$0-Dl;

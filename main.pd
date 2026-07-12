@@ -1,4 +1,4 @@
-#N canvas 92 215 935 373 12;
+#N canvas 91 214 935 373 12;
 #X obj 136 83 jaycee;
 #X obj 136 20 loadbang;
 #X msg 136 44 symbol ./assets/MystiqueBreak.wav;
@@ -83,7 +83,7 @@
 #X text 11 269 (1) Toggle DAC ->;
 #X text 360 87 <- (2) Toggle play back;
 #X connect 0 0 4 0;
-#X connect 0 1 3 0;
+#X connect 0 2 3 0;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 6 0 8 0;
